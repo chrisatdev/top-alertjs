@@ -5,23 +5,132 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Top Alertjs</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/top-alertjs.css" />
-    <link rel="stylesheet" href="css/style.css">
     <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/top-alertjs.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
 <body>
 
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col text-center">
-                <ul class="list-inline mt-100px">
-                    <li class="list-inline-item"><a href="javascript:;" id="btn-default" class="btn btn-default">Default</a></li>
-                    <li class="list-inline-item"><a href="javascript:;" id="btn-info" class="btn btn-info">Info</a></li>
-                    <li class="list-inline-item"><a href="javascript:;" id="btn-warning" class="btn btn-warning">Warning</a></li>
-                    <li class="list-inline-item"><a href="javascript:;" id="btn-danger" class="btn btn-danger">Error</a></li>
-                    <li class="list-inline-item"><a href="javascript:;" id="btn-success" class="btn btn-success">Success</a></li>
+            <div class="col-10 mt-50px">
+                <h1 class="text-center">Top Alertjs</h1>
+                
+                <hr>
+                
+                <h2>Requirements</h2>
+                <ul class="text-left">
+                    <li>Bootstrap 4.2.1</li>
+                    <li>JQuery 3.3.1</li>
+                    <li>JQuery UI 1.12.1</li>
+                    <li>Fontawesome 5.7.1 (Optional)</li>
                 </ul>
+                
+                <hr>
+                
+                <h2>Use mode</h2>
+                <code>
+                    $(selector).topAlertjs(options);
+                </code>
+                
+                <hr>
+
+                <h2>Default parameters</h2>
+                <pre>
+                    <code>
+var defaults = {
+    type: "info",
+    message: "Texto de prueba Top Alertjs",
+    duration: 5,
+    speed: 500,
+    close: false,
+    easing: "easeOutElastic",
+    easingclose: "easeInElastic",
+    callback: function () { }
+};
+                    </code>
+                </pre>
+
+                <hr>
+                
+                <h2>Examples</h2>
+                <ul class="list-unstyled">
+                    <li class="mb-20px">
+                        <p>
+                            <a href="javascript:;" id="btn-default" class="btn btn-default">click Default</a>
+                        </p>
+                        <pre class="code">
+                            <code>
+$('body').topAlertjs();
+                            </code>
+                        </pre>
+                    </li>
+                    <li class="mb-20px">
+                        <p>
+                            <a href="javascript:;" id="btn-info" class="btn btn-info">click Info</a>
+                        </p>
+                        <pre class="code">
+                            <code>
+$('body').topAlertjs({
+    type: 'info',
+    message: 'Boton Info Top Alertjs',
+    close: true,
+    duration: 5
+});
+                            </code>
+                        </pre>
+                    </li>
+                    <li class="mb-20px">
+                        <p>
+                            <a href="javascript:;" id="btn-warning" class="btn btn-warning">click Warning</a>
+                        </p>
+                        <pre class="code">
+                            <code>
+$('body').topAlertjs({
+    type: 'warning',
+    message: 'Boton Warning Top Alertjs',
+    close: true,
+    duration: 5
+});
+                            </code>
+                        </pre>
+                    </li>
+                    <li class="mb-20px">
+                        <p>
+                            <a href="javascript:;" id="btn-danger" class="btn btn-danger">click Error</a>
+                        </p>
+                        <pre class="code">
+                            <code>
+$('body').topAlertjs({
+    type: 'error',
+    message: 'Boton Error Top Alertjs',
+    close: true,
+    duration: 5
+});
+                            </code>
+                        </pre>
+                    </li>
+                    <li class="mb-20px">
+                        <p>
+                            <a href="javascript:;" id="btn-success" class="btn btn-success">click Success</a>
+                        </p>
+
+                        <pre class="code">
+                            <code>
+$('body').topAlertjs({
+    type: 'success',
+    message: 'Boton Success Top Alertjs',
+    close: true,
+    duration: 5
+});
+                            </code>
+                        </pre>
+
+                    </li>
+                </ul>
+                <hr>
+                <p class="text-center">&copy; 2019</p>
             </div>
         </div>
     </div>
@@ -29,7 +138,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-    <script src="js/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="js/external/jquery-ui.min.js" type="text/javascript"></script>
     <script src="js/top-alertjs.js" type="text/javascript"></script>
 
     <script>

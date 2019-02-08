@@ -2,6 +2,20 @@ body{
     background:#e7e7e7;
 }
 
+.mt-50px{
+    margin-top: 50px !important;
+}
+
 .mt-100px{
     margin-top: 100px !important;
+}
+
+.mb-20px{
+    margin-bottom: 20px !important;
+}
+
+.code{
+    background: #031942;
+    color: #e7e7e7;
+    padding: 5px;
 }
