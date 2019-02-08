@@ -1,3 +1,10 @@
+/**
+ * Top Alertjs v1
+ * By Christian Benitez
+ * Git: https://github.com/cbenitez/top-alertjs
+ * Year: 2019
+ */
+
 $.fn.topAlertjs = function (arguments) {
 
     var $element = $(this);
