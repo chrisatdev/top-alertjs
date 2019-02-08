@@ -1,0 +1,50 @@
+.top-alert-container{
+    width       : 100%;
+    padding     : 1.4rem 1.25rem;
+    position    : fixed;
+    display     : none;
+    top         : 0;
+    left        : 0;
+    right       : 0;
+    font-family : "Roboto", sans-serif;
+    text-align  : center;
+    z-index     : 9999;
+}
+
+.top-alert-close {
+    vertical-align    : middle;
+    cursor            : pointer;
+    margin-top        : -2px;
+    padding-left      : 13px;
+    font-size         : 1.8em;
+    line-height       : 20px;
+    float             : right;
+}
+
+.top-alert-close:after {
+    content : "\00d7";
+}
+
+.info{
+    color           : #FFFFFF;
+    background-color: #1e88e5;
+    border-color    : #1e88e5;
+}
+
+.error{
+    color           : #FFFFFF;
+    background-color: #eb5767;
+    border-color    : #eb5767;
+}
+
+.warning{
+    color           : #FFFFFF;
+    background-color: #ffb300;
+    border-color    : #ffb300;
+}
+
+.success{
+    color           : #FFFFFF;
+    background-color: #43a047;
+    border-color    : #43a047;
+}
