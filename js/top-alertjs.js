@@ -65,7 +65,7 @@ $.fn.topAlertjs = function (arguments) {
     $topalertjs.append($message);
 
     if (attributes.close) {
-        var $close = $("<span class='top-alert-close'></span>");
+        var $close = $('<span class="top-alert-close"></span>');
         
         $topalertjs.append($close);
     }
@@ -73,21 +73,21 @@ $.fn.topAlertjs = function (arguments) {
     $element.append($topalertjs);
 
     if (attributes.type === "confirm" ){
-        var $yesButton = $('<button type="button" class="btn btn-success yes-btn">' + attributes.yesBtnText + '</button>');
-        var $noButton = $('<button type="button" class="btn btn-danger no-btn">' + attributes.noBtnText + '</button>');
+        var $yesBtnFunc = $(`<button type="button" class="btn btn-success yes-btn-func">${attributes.yesBtnText}</button>`);
+        var $noBtnFunc = $(`<button type="button" class="btn btn-danger no-btn-func">${attributes.noBtnText}</button>`);
         
-        $topalertjs.append($yesButton);
-        $topalertjs.append($noButton);
+        $topalertjs.append($yesBtnFunc);
+        $topalertjs.append($noBtnFunc);
         $element.data("alertConfirm", null);
 
-        $yesButton.click(function () {
+        $yesBtnFunc.click(function () {
             $topalertjs.slideUp(attributes.speed, attributes.easingclose, function () {
                 $element.data("alertConfirm", true);
                 raise(true, "alertConfirm");
             });
         });
 
-        $noButton.click(function () {
+        $noBtnFunc.click(function () {
             $topalertjs.slideUp(attributes.speed, attributes.easingclose, function () {
                 $element.data("alertConfirm", false);
                 raise(true, "alertConfirm");
@@ -122,10 +122,9 @@ $.fn.topAlertjs = function (arguments) {
         });
 
     } else {
-        $topalertjs
-            .delay(attributes.duration * 1000)
-            .slideUp(attributes.speed, attributes.easingclose, function () {
-                raise(true, null);
-            });
+        $topalertjs.delay(attributes.duration * 1000)
+        .slideUp(attributes.speed, attributes.easingclose, function () {
+            raise(true, null);
+        });
     }
 }

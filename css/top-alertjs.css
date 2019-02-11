@@ -61,11 +61,7 @@
     border-color    : #e2e3e5;
 }
 
-.yes-btn{
-    margin-left: 10px;
-}
-
-.no-btn{
+.yes-btn-func, .no-btn-func{
     margin-left: 10px;
 }
 
