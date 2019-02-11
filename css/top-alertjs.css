@@ -65,6 +65,18 @@
     margin-left: 10px;
 }
 
+.btn-info {
+    color           : #ffffff !important;
+    background-color: #1e88e5 !important;
+    border-color    : #1e88e5 !important;
+}
+
+.btn-warning {
+    color           : #ffffff !important;
+    background-color: #ffb300 !important;
+    border-color    : #ffb300 !important;
+}
+
 .btn-success {
     color           : #ffffff !important;
     background-color: #43a047 !important;
