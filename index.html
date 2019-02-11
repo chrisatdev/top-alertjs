@@ -128,6 +128,22 @@ $('body').topAlertjs({
                         </pre>
 
                     </li>
+                    <li class="mb-20px">
+                        <p>
+                            <a href="javascript:;" id="btn-confirm" class="btn btn-secondary">click Confirm</a>
+                        </p>
+                    
+                        <pre class="code">
+                                                <code>
+$('body').topAlertjs({
+    type: 'confirm',
+    message: 'Boton confirm Top Alertjs',
+    callback: function ( confirm ) { if( confirm ) alert( 'Ok' ); }
+});
+                                                </code>
+                                            </pre>
+                    
+                    </li>
                 </ul>
                 <hr>
                 <p class="text-center">&copy; 2019</p>
@@ -180,6 +196,14 @@ $('body').topAlertjs({
                     message: 'Boton Success Top Alertjs',
                     close: true,
                     duration: 5
+                });
+            });
+
+            $('#btn-confirm').click(function () {
+                $('body').topAlertjs({
+                    type: 'confirm',
+                    message: 'Boton confirm Top Alertjs',
+                    callback: function ( confirm ) { if( confirm ) alert( 'Ok' ); }
                 });
             });
 

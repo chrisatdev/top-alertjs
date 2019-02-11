@@ -1,8 +1,8 @@
 /**
- * Top Alertjs v1
+ * Top Alertjs v1.20190211
  * By Christian Benitez
  * Git: https://github.com/cbenitez/top-alertjs
- * Year: 2019
+ * Last modified: 2019-02-11
  */
 
 $.fn.topAlertjs = function (arguments) {
@@ -15,12 +15,14 @@ $.fn.topAlertjs = function (arguments) {
 
     var defaults = {
         type: "info",
-        message: "Texto de prueba Top Alertjs",
+        message: "This is a message of Top Alertjs!",
         duration: 5,
         speed: 500,
         close: false,
         easing: "easeOutElastic",
         easingclose: "easeInElastic",
+        yesBtnText: "Yes",
+        noBtnText: "No",
         callback: function () { }
     };
 
@@ -37,7 +39,7 @@ $.fn.topAlertjs = function (arguments) {
 
     attributes.type = attributes.type.toLowerCase();
 
-    var validTypes = ["success", "error", "warning", "info"];
+    var validTypes = ["success", "error", "warning", "info","confirm"];
     if ($.inArray(attributes.type, validTypes) === -1) {
         attributes.type = "info";
     }
@@ -69,6 +71,30 @@ $.fn.topAlertjs = function (arguments) {
     }
 
     $element.append($topalertjs);
+
+    if (attributes.type === "confirm" ){
+        var $yesButton = $('<button type="button" class="btn btn-success yes-btn">' + attributes.yesBtnText + '</button>');
+        var $noButton = $('<button type="button" class="btn btn-danger no-btn">' + attributes.noBtnText + '</button>');
+        
+        $topalertjs.append($yesButton);
+        $topalertjs.append($noButton);
+        $element.data("alertConfirm", null);
+
+        $yesButton.click(function () {
+            $topalertjs.slideUp(attributes.speed, attributes.easingclose, function () {
+                $element.data("alertConfirm", true);
+                raise(true, "alertConfirm");
+            });
+        });
+
+        $noButton.click(function () {
+            $topalertjs.slideUp(attributes.speed, attributes.easingclose, function () {
+                $element.data("alertConfirm", false);
+                raise(true, "alertConfirm");
+            });
+        });
+        attributes.close = true;
+    }
 
     $topalertjs.slideDown(attributes.speed, attributes.easing);
 

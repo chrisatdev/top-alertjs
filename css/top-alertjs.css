@@ -1,8 +1,8 @@
 /**
- * Top Alertjs v1
+ * Top Alertjs v1.20190211
  * By Christian Benitez
  * Git: https://github.com/cbenitez/top-alertjs
- * Year: 2019
+ * Last modified: 2019-02-11
  */
 .top-alert-container{
     width       : 100%;
@@ -32,25 +32,51 @@
 }
 
 .info{
-    color           : #FFFFFF;
+    color           : #ffffff;
     background-color: #1e88e5;
     border-color    : #1e88e5;
 }
 
 .error{
-    color           : #FFFFFF;
+    color           : #ffffff;
     background-color: #eb5767;
     border-color    : #eb5767;
 }
 
 .warning{
-    color           : #FFFFFF;
+    color           : #ffffff;
     background-color: #ffb300;
     border-color    : #ffb300;
 }
 
 .success{
-    color           : #FFFFFF;
+    color           : #ffffff;
     background-color: #43a047;
     border-color    : #43a047;
+}
+
+.confirm{
+    color           : #333333;
+    background-color: #e2e3e5;
+    border-color    : #e2e3e5;
+}
+
+.yes-btn{
+    margin-left: 10px;
+}
+
+.no-btn{
+    margin-left: 10px;
+}
+
+.btn-success {
+    color           : #ffffff !important;
+    background-color: #43a047 !important;
+    border-color    : #43a047 !important;
+}
+
+.btn-danger {
+    color           : #ffffff !important;
+    background-color: #eb5767 !important;
+    border-color    : #eb5767 !important;
 }
